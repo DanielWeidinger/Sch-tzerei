@@ -9,6 +9,5 @@ namespace Schaetzerei.Core.Entities.Game
     {
         public ICollection<User> Player { get; set; }
         public ICollection<Round> Rounds { get; set; }
-
     }
 }

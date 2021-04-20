@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace Schaetzerei.Core.Entities.Game
@@ -10,8 +11,9 @@ namespace Schaetzerei.Core.Entities.Game
 
         public ICollection<Question> Questions { get; set; }
 
-        []
-        public Game Game { get; set; }
+        [ForeignKey(nameof(QuestionId))]
+        public Question Question { get; set; }
+        public int QuestionId { get; set; }
     }
 
     public enum RoundType
