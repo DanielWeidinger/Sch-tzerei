@@ -15,11 +15,15 @@ namespace Schaetzerei.Core.Entities.Game
         [Required]
         public string Text { get; set; }
 
-        public IAnswer Answer { get; set; }
+        [Required]
+        public double Duration { get; set; }
+
+        [ForeignKey(nameof(AnswerId))]
+        public Answer Answer { get; set; }
+        public int AnswerId { get; set; }
 
         [ForeignKey(nameof(GameId))]
         public Game Game { get; set; }
-
         public int GameId { get; set; }
 
     }

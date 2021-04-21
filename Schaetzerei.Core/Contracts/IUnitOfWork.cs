@@ -6,10 +6,14 @@ using Schaetzerei.Core.Contracts.Repositories;
 
 namespace Schaetzerei.Core.Contracts
 {
-    interface IUnitOfWork
+    public interface IUnitOfWork
     {
         //Repos
         IUserRepository UserRepository { get; }
+        IGameRepository GameRepository { get; }
+        IRoundRepository RoundRepository { get; }
+        IQuestionRepository QuestionRepository { get; }
+        IAnswerRepository AnswerRepository { get; }
 
         Task<int> SaveChangesAsync();
         Task DeleteDatabaseAsync();
