@@ -1,0 +1,89 @@
+﻿.schea-nav-bar-container {
+    margin: 40px;
+    filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.5));
+    background-color: rgba(0, 0, 0, 0)
+}
+
+.schea-nav-bar {
+    background-color: #000000;
+    clip-path: polygon(0 0, 97% 0, 100% 38%, 100% 100%, 0 100%);
+    height: 100%;
+}
+
+.schea-nav-bar::before {
+    content: '';
+    position: absolute;
+    background-color: #26822F;
+    z-index: -1;
+    height: calc(100% - 10px);
+    width: calc(100% - 10px);
+    clip-path: polygon(0 0, 97% 0, 100% calc(38% + 3px), 100% 100%, 0 100%);
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+}
+
+.schea-nav-bar::after {
+    content: '';
+    position: absolute;
+    border: 5px solid #000000;
+    background-color: #26822F;
+    clip-path: polygon(0 0, 100% 100%, 0 100%);
+    transform: rotate(-5deg);
+    height: calc(38% + 5px);
+    width: calc(3% - 2px);
+    top: 2px;
+    left: 97%;
+}
+
+.schea-heading {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 76.2402px;
+    line-height: 91px;
+
+    color: #ffffff;
+}
+
+.schea-subheading {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 47.1162px;
+    line-height: 57px;
+    /* identical to box height */
+    color: #FFFFFF;
+}
+
+.schea-nav-bar-divider {
+    margin-left: 24px;
+    padding-left: 24px;
+    border-left: 3px dashed #000000;
+}
+
+.schea-login-region {
+    margin-left: auto;
+    margin-right: 4%;
+}
+
+.schea-green-card {
+    background-image: url(../content/cards/green_card.svg);
+    background-repeat: no-repeat;
+    width: 405px;
+    height: 405px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    text-align: center;
+    top: 50%;
+
+    transition: all 0.5s ease;
+}
+
+.schea-green-card:hover {
+    transform: scale(1.1);
+}
+
+.schea-center {
+    margin: auto;
+}
